@@ -2,8 +2,8 @@
     class Ploder {
         constructor (mesh, variance, delay) {
             this._mesh = mesh;
-            this._variance = variance;
-            this._wait = this._delay = delay;
+            this._originalVariance = this._variance = variance;
+            this._originalDelay = this._delay = delay;
             this._originalPos = this.attr.array;
         }
 
@@ -22,12 +22,13 @@
 
         restore () {
             this.array = this._originalPos;
-            this._wait = this._delay;
+            this._variance = this._originalVariance;
+            this._delay = this._originalDelay;
         }
 
         tick () {
-            if (this._wait > 0) {
-                --this._wait;
+            if (this._delay > 0) {
+                --this._delay;
                 return;
             }
 

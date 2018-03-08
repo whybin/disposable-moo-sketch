@@ -13,6 +13,10 @@
                 <a-asset-item id="cow-mtl" src="assets/cow.mtl"></a-asset-item>
                 <a-asset-item id="trash-can-obj" src="assets/Trash_Can.obj"></a-asset-item>
                 <a-asset-item id="trash-can-mtl" src="assets/Trash_Can.mtl"></a-asset-item>
+                <a-asset-item id="feather-obj" src="assets/feather.obj">
+                </a-asset-item>
+                <a-asset-item id="p0ly-obj"
+                    src="assets/p0ly.obj"></a-asset-item>
             </a-assets>
 
             <a-camera>
@@ -22,10 +26,23 @@
             <a-entity id="cow"
                       obj-model="obj: #cow-obj; mtl: #cow-mtl;"
                       position="0 0 -16"
-                      ploder>
+                      ploder="delay: 300;">
                 <a-box scale="10 5 3"
                        position="0 6 0"
                        material="opacity: 0;"></a-box>
+            </a-entity>
+
+            <a-entity id="feather"
+                      obj-model="obj: #feather-obj;"
+                      scale="0.6 0.6 0.6"
+                      position="-39 32 -36">
+            </a-entity>
+
+            <a-entity id="p0ly"
+                      obj-model="obj: #p0ly-obj;"
+                      material="color: gray"
+                      scale="0.3 0.3 0.3"
+                      position="-16 24 -36">
             </a-entity>
 
             <a-entity id="trash"
